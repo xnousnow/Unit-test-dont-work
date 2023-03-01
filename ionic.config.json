@@ -1,0 +1,7 @@
+{
+  "name": "TestIonicAppForUnitTesting",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}
