@@ -13,13 +13,13 @@
         </ion-toolbar>
       </ion-header>
       <div class="ion-padding">
-        <ion-button @click="openModal" expand="block">Open counter modal</ion-button>
+        <ion-button @click="openModal" expand="block"
+          >Open counter modal</ion-button
+        >
       </div>
-      <MyModalComponent
-        ref="modalComponent"
-        :presentingElement="page"
-        @dismissModal="dismissModal"
-      />
+      <ion-modal ref="modalComponent" :presentingElement="page">
+        <my-modal-component @dismissModal="dismissModal" />
+      </ion-modal>
     </ion-content>
   </ion-page>
 </template>
@@ -32,6 +32,7 @@
     IonPage,
     IonTitle,
     IonToolbar,
+    IonModal,
   } from '@ionic/vue'
   import { defineComponent } from 'vue'
   import MyModalComponent from '../components/CounterModal.vue'
@@ -44,6 +45,7 @@
       IonPage,
       IonTitle,
       IonToolbar,
+      IonModal,
       MyModalComponent,
     },
     data() {
